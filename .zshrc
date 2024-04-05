@@ -89,6 +89,10 @@ source $ZSH/oh-my-zsh.sh
 # Path settings ++++++++++++++++++++
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # root
@@ -125,6 +129,8 @@ setopt nonomatch
 # emacs
 alias em='emacs'
 alias emn='emacs -nw'
+# vim
+alias vi='vim'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
