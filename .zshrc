@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autocomplete)
+plugins=(git zsh-syntax-highlighting zsh-autocomplete rye)
 
 
 source $ZSH/oh-my-zsh.sh
@@ -95,6 +95,8 @@ export PATH=$HOME/.local/bin:$PATH
 #[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 #eval "$(pyenv init -)"
 
+# rye PATH
+source "$HOME/.rye/env"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # root
