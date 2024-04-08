@@ -89,10 +89,12 @@ source $ZSH/oh-my-zsh.sh
 # Path settings ++++++++++++++++++++
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 # pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+#export PYENV_ROOT="$HOME/.pyenv"
+#[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # root
@@ -100,6 +102,9 @@ kernel="/usr/local/opt/root/etc/root/notebook/kernels/root"
 
 # Wildcard settings
 setopt nonomatch
+
+# source files
+source /opt/intel/oneapi/setvars.sh > /dev/null
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
